@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF5F0"
+    android:padding="16dp"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- 🔥 ViewPager2 Banner -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/bannerViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp"
+            android:clipToPadding="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp" />
+
+        <!-- 🟣 App Tagline -->
+        <TextView
+            android:id="@+id/tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shop the Latest Trends"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#9C27B0"
+            android:paddingTop="24dp"
+            android:paddingBottom="4dp" />
+
+        <!-- 🟪 App Title -->
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ModaSense"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#6C5CE7"
+            android:paddingBottom="20dp" />
+
+        <!-- Weather Dropdown -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/weather_dropdown_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Weather"
+            app:hintTextColor="@android:color/black"
+            app:endIconMode="dropdown_menu"
+            app:boxStrokeColor="@android:color/black"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoComplete_weather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#6C5CE7"
+                android:textSize="16sp"
+                android:inputType="none"
+                android:focusable="false"
+                android:cursorVisible="false" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Occasion Dropdown -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/occasion_dropdown_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Occasion"
+            app:endIconMode="dropdown_menu"
+            app:hintTextColor="@android:color/black"
+            app:boxStrokeColor="@android:color/black"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoComplete_occasion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#6C5CE7"
+                android:textSize="16sp"
+                android:inputType="none"
+                android:focusable="false"
+                android:cursorVisible="false" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- 🧩 Category Grid -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="1"
+            android:useDefaultMargins="true"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:layout_marginTop="16dp">
+
+            <!-- Women Card -->
+            <LinearLayout
+                android:id="@+id/btn_women"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_women"
+                android:padding="16dp"
+                android:layout_margin="8dp"
+                android:elevation="2dp">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_women"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/bg_image_rounded"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Women"
+                    android:textColor="#9C27B0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp" />
+            </LinearLayout>
+
+            <!-- Men Card -->
+            <LinearLayout
+                android:id="@+id/btn_men"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_men"
+                android:padding="16dp"
+                android:layout_margin="8dp"
+                android:elevation="2dp">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_men"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/bg_image_rounded"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Men"
+                    android:textColor="#009688"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp" />
+            </LinearLayout>
+
+            <!-- Boy Card -->
+            <LinearLayout
+                android:id="@+id/btn_boy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_boy"
+                android:padding="16dp"
+                android:layout_margin="8dp"
+                android:elevation="2dp">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_boy"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/bg_image_rounded"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Boy"
+                    android:textColor="#009688"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp" />
+            </LinearLayout>
+
+            <!-- Girl Card -->
+            <LinearLayout
+                android:id="@+id/btn_girl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_girl"
+                android:padding="16dp"
+                android:layout_margin="8dp"
+                android:elevation="2dp">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_girl"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/bg_image_rounded"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Girl"
+                    android:textColor="#009688"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp" />
+            </LinearLayout>
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>

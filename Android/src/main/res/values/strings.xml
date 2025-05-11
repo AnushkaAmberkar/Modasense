@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ModaSense</string>
+    <string name="men">Men</string>
+    <string name="women">Women</string>
+    <string name="kids">Kids</string>
+    <string name="accessories">Accessories</string>
+    <string-array name="weather_options">
+        <item>Auto Detect</item>
+        <item>Sunny</item>
+        <item>Rainy</item>
+        <item>Cold</item>
+        <item>Windy</item>
+    </string-array>
+    <string name="select_weather">Select Weather</string>
+    <string name="select_occasion">Select Occasion</string>
+
+
+</resources>

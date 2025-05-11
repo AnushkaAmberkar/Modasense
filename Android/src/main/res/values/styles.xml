@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomTextInputStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextColor">@android:color/black</item>
+        <item name="boxStrokeColor">@android:color/black</item>
+    </style>
+    <style name="ModaImageView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:background">@drawable/bg_image_rounded</item>
+        <item name="android:padding">4dp</item>
+        <item name="hintTextColor">@color/black</item>
+    </style>
+</resources>
